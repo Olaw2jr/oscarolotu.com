@@ -1,4 +1,7 @@
 <article @php(post_class())>
+    <div class="embed-responsive mb-3">
+        @php( the_post_thumbnail('oscar-featured-image', ['alt' => get_the_title()]) )
+    </div>
     <div class="post-content">
         <h1 class="entry-title" >{{ get_the_title() }}</h1>
 

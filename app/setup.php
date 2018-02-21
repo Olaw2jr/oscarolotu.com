@@ -66,6 +66,21 @@ add_action('after_setup_theme', function () {
      * @see resources/assets/styles/layouts/_tinymce.scss
      */
     add_editor_style(asset_path('styles/main.css'));
+
+    /*
+	 * Enable support for Post Formats.
+	 *
+	 * See: https://codex.wordpress.org/Post_Formats
+	 */
+    add_theme_support( 'post-formats', ['image', 'video', 'quote', 'gallery', 'audio',]);
+        
+    /*
+     * Add theme support for Custom Logo.
+     *
+     * See: https://codex.wordpress.org/Theme_Logo
+     */
+	add_theme_support( 'custom-logo', ['width' => 400, 'height' => 400, 'flex-width' => true,]);
+
 }, 20);
 
 /**

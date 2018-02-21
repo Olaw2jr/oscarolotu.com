@@ -1,4 +1,5 @@
 <article @php(post_class())>
+    @php( the_post_thumbnail('oscar-featured-image', ['class' => 'img-fluid img-thumbnail mb-3', 'alt' => get_the_title()]) )
     <div class="post-content">
         <h1 class="entry-title" >{{ get_the_title() }}</h1>
 

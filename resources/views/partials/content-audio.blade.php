@@ -1,4 +1,9 @@
 <article @php( post_class('mb-5') )>
+
+    <div class="embed-responsive mb-4">
+        @php(the_post_thumbnail('oscar-featured-image'))
+    </div>
+    
     <div class="post-content">
         <a href="{{ get_permalink() }}"><h1 class="post-title">{{ get_the_title() }}</h1></a>
         
@@ -11,4 +16,3 @@
         </div>
     </div>
 </article><!--article-->
-

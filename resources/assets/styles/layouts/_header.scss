@@ -1,7 +1,84 @@
-.banner .nav li {
-  @extend .nav-item;
+.header {
+  padding: 30px 0;
+  border-top: 1px solid #007bff;
+
+  .profile-image {
+    margin-right: 30px;
+    height: 160px;
+  }
+
+  .profile-content {
+    .name {
+      font-size: 38px;
+      margin-bottom: 5px;
+      margin-top: 10px;
+
+      a {
+        color: #49515a;
+        text-decoration: none;
+      }
+    }
+
+    .desc {
+      color: #778492;
+      font-size: 1.2rem;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .social {
+      .list-inline-item:not(:last-child) {
+        margin-right: 20px;
+      }
+
+      a {
+        color: #868e96;
+        width: 36px;
+        height: 36px;
+        display: inline-block;
+        border: 1px solid;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        text-align: center;
+
+        .fa {
+          font-size: 20px;
+          padding-top: 8px;
+        }
+      }
+    }
+  }
+
+  .btn {
+    margin-top: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
 }
 
-.banner .nav a {
-  @extend .nav-link;
-}
+@include media-breakpoint-down(sm) {
+  .header {
+    text-align: center;
+
+    .profile-image {
+      float: none !important;
+      margin: 0 auto;
+    }
+
+    .profile-content {
+      float: none !important;
+      text-align: center;
+    }
+
+    .btn {
+      margin-top: 30px;
+      float: none !important;
+    }
+  }
+} // Small Devices ( Landscape Phones less than 768px ( max-width: 767px ) )

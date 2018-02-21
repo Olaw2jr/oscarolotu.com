@@ -20,4 +20,5 @@
 .comment-form input[type="submit"] {
   @extend .btn;
   @extend .btn-secondary;
+  @extend .px-4;
 }
