@@ -1,7 +1,7 @@
 body {
-  color: #666;
+  // color: #666;
   letter-spacing: 0;
-  line-height: 1.85714286em;
+  line-height: 1.9em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -29,4 +29,12 @@ h6 {
   font-weight: 300;
   font-variant-ligatures: common-ligatures;
   margin-top: 0;
+}
+
+// Get Rid of Bootstrap input shadows
+input[type='text'],
+input[type='email'],
+textarea {
+  outline: none !important;
+  box-shadow: none !important;
 }

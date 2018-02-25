@@ -1,7 +1,7 @@
 .post {
-  @extend .mb-3;
+  @extend .mb-5;
 
-  padding-bottom: 70px;
+  // padding-bottom: 70px;
 
   .wp-post-image {
     border: 1px solid rgba(0, 0, 0, 0.125);
@@ -27,18 +27,18 @@
   }
 
   .post-content {
-    .post-title {
-      font-size: 1.5rem;
+    .entry-title {
+      font-size: 1.8rem;
       margin-bottom: 0;
     }
 
-    .post-meta {
-      padding-top: 15px;
-      margin-bottom: 20px;
+    .entry-meta {
+      padding-top: 0.5rem;
+      margin-bottom: 0.5rem;
 
       li {
         &:not(:last-child) {
-          margin-right: 10px;
+          margin-right: 1rem;
         }
 
         &::after {
@@ -46,17 +46,17 @@
           margin-left: 10px;
         }
 
-        i {
-          margin-right: 5px;
+        .svg-inline--fa { // Font Awesome Classes
+          margin-right: 0.2rem;
         }
       }
     }
 
-    .entry-meta {
+    .entry-content {
       @extend .text-justify;
 
       .hljs {
-        padding: 1.25rem;
+        padding: 1.3rem;
         background: #fff;
         border: 1px solid #ced4da;
         border-radius: 0.25em;
@@ -75,14 +75,16 @@
     @extend .lead;
     @extend .mb-0;
 
-    &::before {
-      @extend .fa;
-      @extend .fa-3x;
-      @extend .fa-pull-left;
-      // WHy do i need to hack evey time
-      content: "\f10d";
-      font-family: "FontAwesome";
-    }
+    // &::before {
+    //   display: none; // Set display: none; so that the actual pseudo element isn’t visible (we only need it for style reference)
+    //   content: "\f10d";
+    //   font-family: "Font Awesome 5 Solid";
+    // }
+  }
+
+  .fa-border {
+    border: solid 0.03em #ced4da !important;
+    border-radius: 0.25em !important;
   }
 
   .lead {

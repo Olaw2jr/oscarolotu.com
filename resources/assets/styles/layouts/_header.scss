@@ -5,9 +5,16 @@
   .profile-image {
     margin-right: 30px;
     height: 160px;
+
+    @extend .img-fluid;
+    @extend .float-left;
+    @extend .rounded-circle;
+    @extend .img-thumbnail;
   }
 
   .profile-content {
+    @extend .float-left;
+
     .name {
       font-size: 38px;
       margin-bottom: 5px;
@@ -27,6 +34,8 @@
     }
 
     .social {
+      @extend .list-inline;
+
       .list-inline-item:not(:last-child) {
         margin-right: 20px;
       }
@@ -47,8 +56,8 @@
         background-clip: padding-box;
         text-align: center;
 
-        .fa {
-          font-size: 20px;
+        .svg-inline--fa { // Font Awesome 5 Class
+          font-size: 1.7rem;
           padding-top: 8px;
         }
       }
@@ -59,6 +68,9 @@
     margin-top: 40px;
     font-weight: bold;
     text-transform: uppercase;
+
+    @extend .btn-outline-secondary;
+    @extend .float-right;
   }
 }
 

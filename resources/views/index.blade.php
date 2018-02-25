@@ -3,7 +3,7 @@
 @section('content')
 
   <div class="row">
-      <div class="col-md-9 ml-auto mr-auto mb-5">
+      <div class="col-md-9 mx-auto">
 
           <!-- @include('partials.page-header') -->
 

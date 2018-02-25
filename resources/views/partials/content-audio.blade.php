@@ -1,11 +1,11 @@
-<article @php( post_class('mb-5') )>
+<article @php( post_class() )>
 
     <div class="embed-responsive mb-4">
         @php(the_post_thumbnail('oscar-featured-image'))
     </div>
     
     <div class="post-content">
-        <a href="{{ get_permalink() }}"><h1 class="post-title">{{ get_the_title() }}</h1></a>
+        <a href="{{ get_permalink() }}"><h1 class="entry-title">{{ get_the_title() }}</h1></a>
         
         @include( 'partials/entry-meta' )
 
