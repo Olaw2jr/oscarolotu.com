@@ -1,25 +1,29 @@
-import * as hljs from 'highlight.js';
-
-import fontawesome from '@fortawesome/fontawesome';
-import FontAwesomeConfig from '@fortawesome/fontawesome';
-import faTags from '@fortawesome/fontawesome-free-solid/faTags';
-import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter';
-import faCalendar from '@fortawesome/fontawesome-free-regular/faCalendar';
-import faGithubAlt from '@fortawesome/fontawesome-free-brands/faGithubAlt';
-import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram';
-import faQuoteLeft from '@fortawesome/fontawesome-free-solid/faQuoteLeft';
-import faPaperPlane from '@fortawesome/fontawesome-free-regular/faPaperPlane';
-import faUserCircle from '@fortawesome/fontawesome-free-regular/faUserCircle';
+import { dom, library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faGithubAlt,
+  faInstagram,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+import { faCalendar, faUserCircle } from "@fortawesome/free-regular-svg-icons";
+import { faQuoteLeft, faTags } from "@fortawesome/free-solid-svg-icons";
+// import hljs from "highlight.js";
 
 export default {
   init() {
     // JavaScript to be fired on all pages
-    hljs.initHighlightingOnLoad();
+    // hljs.initHighlightingOnLoad();
 
-    fontawesome.library.add(faTwitter, faCalendar, faTags, faGithubAlt, faInstagram, faQuoteLeft, faPaperPlane, faUserCircle);
+    library.add(
+      faTwitter,
+      faCalendar,
+      faTags,
+      faGithubAlt,
+      faInstagram,
+      faQuoteLeft,
+      faUserCircle
+    );
 
-    // Enable Font-Awesome in CSS
-    FontAwesomeConfig.searchPseudoElements = true;
+    dom.watch();
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

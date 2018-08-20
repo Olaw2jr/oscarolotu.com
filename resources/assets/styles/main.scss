@@ -1,7 +1,7 @@
 @import "common/variables";
 
 /** Import everything from autoload */
-@import "./autoload/**/*";
+// @import "./autoload/**/*";
 
 /**
  * Import npm dependencies
@@ -10,6 +10,23 @@
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
 // @import "~some-node-module";
+
+// Required
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// Optional
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/code";
+@import "~bootstrap/scss/grid";
+
+// Added By Me
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/utilities";
 
 /** Import theme styles */
 @import "common/global";

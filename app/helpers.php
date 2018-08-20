@@ -14,7 +14,7 @@ use Roots\Sage\Container;
  */
 function sage($abstract = null, $parameters = [], Container $container = null)
 {
-    $container = $container ?: Container::getInstance();
+    $container = $container ? : Container::getInstance();
     if (!$abstract) {
         return $container;
     }
@@ -138,3 +138,16 @@ function display_sidebar()
     isset($display) || $display = apply_filters('sage/display_sidebar', false);
     return $display;
 }
+
+/**
+ * Remove JQuery from my theme coz its old school
+ * @return none
+ */
+add_filter('init', function () {
+    if (is_admin()) {
+        return;
+    }
+
+    wp_deregister_script('jquery');
+    wp_register_script('jquery', false);
+});
