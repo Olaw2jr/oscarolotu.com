@@ -8,19 +8,19 @@ import {
 
 export default function Home() {
   return (
-    <div className="mx-5 sm:mx-0 flex flex-col space-y-5 max-w-xl">
+    <div className="mx-5 sm:mx-0 flex flex-col space-y-5 max-w-2xl">
       <Image
         src="/profile.jpg"
         alt="Profile Picture"
-        width={90}
-        height={90}
+        width={80}
+        height={80}
         className="rounded-full"
       />
       <h1 className="text-5xl font-bold tracking-tighter">
         Security Engineer and Developer.
       </h1>
       <p className="mt-6 text-base text-zinc-600">
-        Hey, I'm Oscar. I'm a Senior Security Engineer at{" "}
+        Hey! I'm Oscar, a Senior Security Engineer at{" "}
         <a
           href="https://www.tigo.co.tz/"
           target="_blank"

@@ -34,17 +34,6 @@ const nextConfig = {
         destination: "https://oscarolotu.com/blog/:path*",
         permanent: true,
       },
-      {
-        source: "/",
-        has: [
-          {
-            type: "host",
-            value: "steven.blue",
-          },
-        ],
-        destination: "https://staging.bsky.app/profile/steven.blue",
-        permanent: true,
-      },
     ];
   },
 };

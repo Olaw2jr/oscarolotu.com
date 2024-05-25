@@ -1,13 +1,14 @@
-import { GeistSans, GeistMono } from "geist/font";
-import "@/styles/globals.css";
-import { Analytics } from "@vercel/analytics/react";
 import cx from "classnames";
-import Container from "./components/container";
 import NavBar from "./components/navbar";
+import { GeistSans } from 'geist/font/sans';
+import { GeistMono } from 'geist/font/mono';
+import Container from "./components/container";
+import { Analytics } from "@vercel/analytics/react";
+import "@/styles/globals.css";
 
 export const metadata = {
-  title: "Steven Tey",
-  description: "Personal website of Steven Tey",
+  title: "Oscar Olotu",
+  description: "Personal website of Oscar Olotu",
   metadataBase: "https://oscarolotu.com",
 };
 
