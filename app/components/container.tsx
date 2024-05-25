@@ -5,18 +5,18 @@ import { ReactNode } from "react";
 
 const meta: Record<string, { title: string; description: string }> = {
   about: {
-    title: "I'm Steven Tey. I'm a programmer, writer, and pianist.",
+    title: "Hey i'm Oscar Olotu, a security engineer and developer.",
     description: "A brief introduction to me, my background, and my interests.",
   },
   projects: {
-    title: "Things I've made trying to put my dent in the universe.",
+    title: "Things I'(m/ve) made trying to put my dent in the universe.",
     description:
       "I've worked on tons of little projects over the years but these are the ones that I'm most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved.",
   },
   blog: {
-    title: "Writing on software, design, and startups",
+    title: "Writing on security, software, design, and startups",
     description:
-      "All of my long-form thoughts on programming, product design, and more, collected in chronological order.",
+      "All of my long-form thoughts on security, programming, product design, and more, collected in chronological order.",
   },
 };
 

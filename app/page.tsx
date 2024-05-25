@@ -12,54 +12,27 @@ export default function Home() {
       <Image
         src="/profile.jpg"
         alt="Profile Picture"
-        width={60}
-        height={60}
+        width={90}
+        height={90}
         className="rounded-full"
       />
       <h1 className="text-5xl font-bold tracking-tighter">
-        Programmer. Writer. Pianist.
+        Security Engineer and Developer.
       </h1>
       <p className="mt-6 text-base text-zinc-600">
-        Hey, I'm Steven. I'm a Senior Developer Advocate at{" "}
+        Hey, I'm Oscar. I'm a Senior Security Engineer at{" "}
         <a
-          href="https://vercel.com/"
+          href="https://www.tigo.co.tz/"
           target="_blank"
           rel="noreferrer noopener"
           className="underline underline-offset-4 text-zinc-800 font-semibold"
         >
-          Vercel
+          Axian Telcom (Tigo Zantel)
         </a>
-        , where I help build the future of the web.
+        , where I help safeguard the largest telco.
       </p>
       <p className="mt-6 text-base text-zinc-600">
-        I also maintain projects like{" "}
-        <a
-          href="https://dub.co"
-          target="_blank"
-          rel="noreferrer noopener"
-          className="underline underline-offset-4 text-zinc-800 font-semibold"
-        >
-          Dub
-        </a>
-        ,{" "}
-        <a
-          href="https://novel.sh/"
-          target="_blank"
-          rel="noreferrer noopener"
-          className="underline underline-offset-4 text-zinc-800 font-semibold"
-        >
-          Novel
-        </a>
-        , and{" "}
-        <a
-          href="https://oneword.domains"
-          target="_blank"
-          rel="noreferrer noopener"
-          className="underline underline-offset-4 text-zinc-800 font-semibold"
-        >
-          One Word Domains
-        </a>
-        .
+      In my free time, I dive into the depths of code, constantly exploring new languages, frameworks, and ideas.{" "}
       </p>
       <div className="mt-6 flex gap-6">
         <a
@@ -70,7 +43,7 @@ export default function Home() {
           <TwitterIcon className="h-6 w-6 hover:scale-105 transition-all" />
         </a>
         <a
-          href="https://github.com/steven-tey"
+          href="https://github.com/Olaw2jr"
           target="_blank"
           rel="noreferrer noopener"
         >

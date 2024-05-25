@@ -1,4 +1,5 @@
 import { Link } from "lucide-react";
+import Image from 'next/image'
 import Card from "../components/card";
 
 const projects = [
@@ -23,26 +24,6 @@ const projects = [
     link: { href: "https://sharegpt.com", label: "sharegpt.com" },
     logo: "https://sharegpt.com/logo.png",
   },
-  {
-    name: "One Word Domains",
-    description:
-      "Database of 1.2M+ available one-word domains for your startup.",
-    link: { href: "https://oneword.domains", label: "oneword.domains" },
-    logo: "https://oneword.domains/logo.png",
-  },
-  {
-    name: "Extrapolate",
-    description: "See how well you age with AI. Over 36K photos generated.",
-    link: { href: "https://extrapolate.app", label: "extrapolate.app" },
-    logo: "https://extrapolate.app/logo.png",
-  },
-  {
-    name: "Precedent",
-    description:
-      "An opinionated collection of components, hooks, and utilities for your Next.js project.",
-    link: { href: "https://precedent.dev", label: "precedent.dev" },
-    logo: "https://precedent.dev/logo.png",
-  },
 ];
 
 export default function Projects() {
@@ -54,9 +35,11 @@ export default function Projects() {
       >
         {projects.map((project) => (
           <Card as="li" key={project.name}>
-            <img
+            <Image
               src={project.logo}
               alt={`${project.name} Logo`}
+              width={60}
+              height={60}
               className="h-8 w-8 relative z-10 rounded-md"
             />
             <h2 className="mt-6 text-base font-semibold text-zinc-800">
