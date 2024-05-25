@@ -52,7 +52,7 @@ const computedFields = {
       url: `https://oscarolotu.com/blog/${doc._raw.flattenedPath}`,
       author: {
         "@type": "Person",
-        name: "Steven Tey",
+        name: "Oscar Olotu",
       },
     }),
   },
