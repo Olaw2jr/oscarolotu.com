@@ -63,7 +63,7 @@ export default function Home() {
       </p>
       <div className="mt-6 flex gap-6">
         <a
-          href="https://twitter.com/steventey"
+          href="https://twitter.com/Olaw2jr"
           target="_blank"
           rel="noreferrer noopener"
         >
@@ -77,7 +77,7 @@ export default function Home() {
           <GitHubIcon className="h-6 w-6 hover:scale-105 transition-all" />
         </a>
         <a
-          href="https://linkedin.com/in/steventey"
+          href="https://linkedin.com/in/oscarolotu"
           target="_blank"
           rel="noreferrer noopener"
         >

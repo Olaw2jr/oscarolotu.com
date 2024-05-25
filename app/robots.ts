@@ -5,7 +5,7 @@ export default function robots() {
         userAgent: "*",
       },
     ],
-    sitemap: "https://steventey.com/sitemap.xml",
-    host: "https://steventey.com",
+    sitemap: "https://oscarolotu.com/sitemap.xml",
+    host: "https://oscarolotu.com",
   };
 }

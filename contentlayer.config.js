@@ -45,11 +45,11 @@ const computedFields = {
       dateModified: doc.publishedAt,
       description: doc.summary,
       image: doc.image
-        ? `https://steventey.com${doc.image}`
-        : `https://steventey.com/api/og?title=${encodeURIComponent(
+        ? `https://oscarolotu.com${doc.image}`
+        : `https://oscarolotu.com/api/og?title=${encodeURIComponent(
             doc.title
           )}}`,
-      url: `https://steventey.com/blog/${doc._raw.flattenedPath}`,
+      url: `https://oscarolotu.com/blog/${doc._raw.flattenedPath}`,
       author: {
         "@type": "Person",
         name: "Steven Tey",

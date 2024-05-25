@@ -3,7 +3,7 @@ export async function getBlurDataURL(url: string | null) {
     return "data:image/webp;base64,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
   }
   if (url.startsWith("/images/")) {
-    url = `https://steventey.com${url}`;
+    url = `https://oscarolotu.com${url}`;
   }
   try {
     const response = await fetch(

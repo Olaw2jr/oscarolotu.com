@@ -17,10 +17,10 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "blog.steventey.com",
+            value: "blog.oscarolotu.com",
           },
         ],
-        destination: "https://steventey.com/blog",
+        destination: "https://oscarolotu.com/blog",
         permanent: true,
       },
       {
@@ -28,10 +28,10 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "blog.steventey.com",
+            value: "blog.oscarolotu.com",
           },
         ],
-        destination: "https://steventey.com/blog/:path*",
+        destination: "https://oscarolotu.com/blog/:path*",
         permanent: true,
       },
       {

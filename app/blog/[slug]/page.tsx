@@ -36,8 +36,8 @@ export async function generateMetadata({
     slug,
   } = post;
   const ogImage = image
-    ? `https://steventey.com${image}`
-    : `https://steventey.com/api/og?title=${encodeURIComponent(title)}}`;
+    ? `https://oscarolotu.com${image}`
+    : `https://oscarolotu.com/api/og?title=${encodeURIComponent(title)}}`;
 
   return {
     title,
@@ -47,7 +47,7 @@ export async function generateMetadata({
       description,
       type: "article",
       publishedTime,
-      url: `https://steventey.com/blog/${slug}`,
+      url: `https://oscarolotu.com/blog/${slug}`,
       images: [
         {
           url: ogImage,

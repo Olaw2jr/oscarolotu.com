@@ -3,6 +3,6 @@
     "silent": true
   },
   "redirects": [
-    { "source": "/r/:slug*", "destination": "https://go.steventey.com/:slug*" }
+    { "source": "/r/:slug*", "destination": "https://go.oscarolotu.com/:slug*" }
   ]
 }
