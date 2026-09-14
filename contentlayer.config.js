@@ -4,6 +4,8 @@ import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
+const siteUrl = "https://oscar.co.tz";
+
 const computedFields = {
   slug: {
     type: "string",
@@ -29,7 +31,6 @@ const computedFields = {
   githubRepos: {
     type: "array",
     resolve: (doc) => {
-      // match all <GithubRepo url=""/> and extract the url
       return doc.body.raw.match(
         /(?<=<GithubRepo[^>]*\burl=")[^"]+(?="[^>]*\/>)/g
       );
@@ -42,17 +43,19 @@ const computedFields = {
       "@type": "BlogPosting",
       headline: doc.title,
       datePublished: doc.publishedAt,
-      dateModified: doc.publishedAt,
+      dateModified: doc.updatedAt || doc.publishedAt,
       description: doc.summary,
       image: doc.image
-        ? `https://oscarolotu.com${doc.image}`
-        : `https://oscarolotu.com/api/og?title=${encodeURIComponent(
-            doc.title
-          )}}`,
-      url: `https://oscarolotu.com/blog/${doc._raw.flattenedPath}`,
+        ? `${siteUrl}${doc.image}`
+        : `${siteUrl}/api/og?title=${encodeURIComponent(doc.title)}`,
+      url: `${siteUrl}/blog/${doc._raw.flattenedPath}`,
+      inLanguage: doc.language || "en",
+      keywords: doc.keywords?.join(", "),
+      articleSection: doc.series || "Blog",
       author: {
         "@type": "Person",
         name: "Oscar Olotu",
+        url: siteUrl,
       },
     }),
   },
@@ -63,21 +66,15 @@ export const Post = defineDocumentType(() => ({
   filePathPattern: `**/*.mdx`,
   contentType: "mdx",
   fields: {
-    title: {
-      type: "string",
-      required: true,
-    },
-    publishedAt: {
-      type: "string",
-      required: true,
-    },
-    summary: {
-      type: "string",
-      required: true,
-    },
-    image: {
-      type: "string",
-    },
+    title: { type: "string", required: true },
+    publishedAt: { type: "string", required: true },
+    updatedAt: { type: "string" },
+    summary: { type: "string", required: true },
+    image: { type: "string" },
+    language: { type: "string" },
+    series: { type: "string" },
+    seriesOrder: { type: "number" },
+    keywords: { type: "list", of: { type: "string" } },
   },
   computedFields,
 }));
@@ -94,8 +91,6 @@ export default makeSource({
         {
           theme: "one-dark-pro",
           onVisitLine(node) {
-            // Prevent lines from collapsing in `display: grid` mode, and allow empty
-            // lines to be copy/pasted
             if (node.children.length === 0) {
               node.children = [{ type: "text", value: " " }];
             }
