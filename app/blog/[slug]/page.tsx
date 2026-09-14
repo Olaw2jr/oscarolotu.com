@@ -10,16 +10,11 @@ import NewsletterForm from "../components/newsletter-form";
 import BlurImage from "@/app/components/blur-image";
 import getRepos from "@/lib/github";
 
-export const revalidate = 300;
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 const siteUrl = "https://oscar.co.tz";
 const isPublished = (publishedAt: string) => new Date(publishedAt) <= new Date();
-
-export async function generateStaticParams() {
-  return allPosts
-    .filter((post) => isPublished(post.publishedAt))
-    .map((post) => ({ slug: post.slug }));
-}
 
 export async function generateMetadata({
   params,
