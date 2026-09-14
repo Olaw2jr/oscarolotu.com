@@ -56,7 +56,7 @@ export async function generateMetadata({
       type: "article",
       publishedTime,
       url: canonical,
-      locale: language === "sw" ? "sw_TZ" : "en_US",
+      locale: language?.startsWith("sw") ? "sw_TZ" : "en_US",
       images: [{ url: ogImage }],
     },
     twitter: {
